@@ -75,7 +75,7 @@ impl Transformer for CHex {
         let mut buf = String::new();
 
         for &byte in input {
-            write!(&mut buf, "\\x{:X}", byte).expect("Couldn't format string");
+            write!(&mut buf, "\\x{:02X}", byte).expect("Couldn't format string");
         }
 
         if buf.is_empty() {
