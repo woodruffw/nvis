@@ -58,7 +58,6 @@ fn main() {
         focus_idx: 0,
     });
 
-    siv.add_global_callback(Event::CtrlChar('i'), focus_input);
     siv.add_global_callback(Event::Key(Key::Up), focus_down);
     siv.add_global_callback(Event::Key(Key::Down), focus_up);
     siv.add_global_callback(Event::CtrlChar('s'), clip);
@@ -90,10 +89,6 @@ fn tick(s: &mut Cursive) {
             },
         );
     }
-}
-
-fn focus_input(s: &mut Cursive) {
-    s.focus_id("_input").unwrap();
 }
 
 fn focus_up(s: &mut Cursive) {
