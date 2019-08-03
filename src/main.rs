@@ -64,6 +64,7 @@ fn main() {
     siv.add_global_callback(Event::CtrlChar('t'), toggle_mode);
     siv.add_global_callback(Event::CtrlChar('q'), |s| s.quit());
 
+    tick(&mut siv);
     siv.run();
 }
 
