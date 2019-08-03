@@ -21,7 +21,7 @@ impl Transformer for Base64 {
     }
 
     fn transform(&self, input: &[u8]) -> String {
-        let output = base64::encode_config(input, base64::STANDARD_NO_PAD);
+        let output = base64::encode_config(input, base64::STANDARD);
 
         if output.is_empty() {
             return String::from(crate::nvis::NONE_PLACEHOLDER);
@@ -38,7 +38,7 @@ impl Transformer for Base32 {
     }
 
     fn transform(&self, input: &[u8]) -> String {
-        let output = base32::encode(base32::Alphabet::RFC4648 { padding: false }, input);
+        let output = base32::encode(base32::Alphabet::RFC4648 { padding: true }, input);
 
         if output.is_empty() {
             return String::from(crate::nvis::NONE_PLACEHOLDER);
