@@ -20,7 +20,7 @@ fn main() {
                     .with_id(transformer.label()),
             )
             .title(transformer.label())
-            .with_id(format!("{}_dialog", transformer.label()).as_str())
+            .with_id(format!("_{}_dialog", transformer.label()).as_str())
             .full_width(),
         )
     }
@@ -84,7 +84,7 @@ fn tick(s: &mut Cursive) {
         };
 
         s.call_on_id(
-            format!("{}_dialog", transformer.label()).as_str(),
+            format!("_{}_dialog", transformer.label()).as_str(),
             |view: &mut Dialog| {
                 view.set_title(title.as_str());
             },
