@@ -8,6 +8,8 @@ use cursive::view::Identifiable;
 use cursive::views::*;
 use cursive::Cursive;
 
+use hex;
+
 mod nvis;
 
 fn main() {
@@ -153,8 +155,8 @@ fn build_input(input: &str, mode: &nvis::InputMode) -> Vec<u8> {
         String::from(input).into_bytes()
     } else {
         if input.starts_with("0x") {
-            match isize::from_str_radix(&input[2..], 16) {
-                Ok(n) => return drop_leading_zeros(&n.to_ne_bytes()),
+            match hex::decode(&input[2..]) {
+                Ok(v) => return v,
                 Err(_e) => return vec![],
             }
         } else if input.starts_with("0o") {
