@@ -22,7 +22,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Deps
       run: |
-        apt update
-        apt install -y libncursesw5-dev
+        sudo apt update
+        sudo apt install -y libncursesw5-dev
     - name: Build
       run: cargo build
