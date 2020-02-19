@@ -20,5 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Deps
+      run: |
+        apt update
+        apt install -y libncursesw5-dev
     - name: Build
       run: cargo build

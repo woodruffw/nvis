@@ -1,7 +1,7 @@
 nvis
 ====
 
-[![Build Status](https://travis-ci.com/woodruffw/nvis.svg?branch=master)](https://travis-ci.com/woodruffw/nvis)
+[![Build Status](https://img.shields.io/github/workflow/status/woodruffw/nvis/CI/master)](https://github.com/woodruffw/nvis/actions?query=workflow%3ACI)
 
 A very simple input visualizer.
 
