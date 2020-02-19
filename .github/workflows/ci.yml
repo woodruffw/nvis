@@ -23,6 +23,6 @@ jobs:
     - name: Deps
       run: |
         sudo apt update
-        sudo apt install -y libncursesw5-dev
+        sudo apt install -y libncursesw5-dev libxcb-shape0 libxcb-xfixes0
     - name: Build
       run: cargo build
