@@ -24,7 +24,7 @@ pub struct Context {
     pub focus_idx: u16,
 }
 
-pub const TRANSFORMERS: [&'static Transformer; 16] = [
+pub const TRANSFORMERS: [&'static dyn Transformer; 16] = [
     &(Base64 {}),
     &(Base32 {}),
     &(Hex {}),
