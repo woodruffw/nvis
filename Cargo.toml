@@ -14,7 +14,7 @@ maintenance = { status = "experimental" }
 [dependencies]
 base32 = "0.4.0"
 base64 = "0.13.0"
-byteorder = "1.4.2"
+byteorder = "1.4.3"
 clipboard = "0.5.0"
 cursive = "0.16"
 hex = "0.4.3"
